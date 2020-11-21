@@ -1,27 +1,73 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  padding:10px;
+}
+
 .App {
   text-align: center;
+  background:lightcyan;
+  width:80%;
+  margin:auto;
+  border:1px black solid;
+  border-radius: 12px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  border-bottom: 1px solid;
+  font-size: larger;
+  font-weight: 900;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.items{
+  height:500px;
+  background-color: rgb(182, 241, 212);
+  margin: auto;
+  padding: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content:space-between;
+}
+h3, div{
+  margin:auto;
+}
+.good{
+  margin-right: 10px;
+}
+input{
+  width:100%;
+  font-size: large;
+  
+  border-inline: none;
+}
+.add{
+  margin:5px;
+  border:none;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  background-color: lightpink;
+  transition: all 300ms;
+  cursor: pointer;
+  outline: none;
+}
+.add:hover{
+  transform: scale(0.8);
+  background-color: red;
   color: white;
+}
+.add:active{
+  transform: scale(1.1);
+  background-color: yellow;
+  color: white;
+}
+.good{
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.good:hover{
+  transform: scale(1.3);
 }
 
 .App-link {
@@ -34,5 +80,23 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.modal{
+  width: 300px;
+  height: 300px;
+  background-color: lightcyan;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-80%);
+
+  
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
